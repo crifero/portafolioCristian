@@ -168,7 +168,10 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
   }
   
   .background-container-top::after {
@@ -189,6 +192,9 @@
     background-position: center;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .background-container-mid::after {
@@ -222,11 +228,9 @@
   }
   
   .name {
-    position: absolute;
-    top: 10%;
-    right: auto;
-    left: 10%;
-    align-items: center;
+    float: left; 
+    height: max-content;
+    width: max-content;
     z-index: 1;
     
   }
@@ -236,7 +240,7 @@
     font-weight: 400;
     font-style: italic;
     color: azure;
-    font-size: 30px;
+    font-size: 40px;
     
   }
   
@@ -245,18 +249,17 @@
     font-weight: 200;
     font-style: normal;
     color: black;
-    font-size: 15px;
+    font-size: 25px;
     animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   }
 
   .competencias-title {
-    
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3); 
     position: absolute;
-    top: 10%;
-    right: auto;
-    left: 35%;
-    align-items: center;
     z-index: 1;
+    height: max-content;
+    width: max-content;
   }
   
   .competencias-title h1 {
@@ -265,7 +268,7 @@
     font-style: italic;
     color: black;
     font-size: 20px;
-    animation: scale-in-tr 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    text-align: center;
   }
 
   .competencias-container {
@@ -286,6 +289,7 @@
     font-family: "Shadows Into Light", cursive;
   font-style: normal;
   font-size: 14px;
+  text-align: right;
   color: aliceblue;
     
   }
@@ -303,6 +307,7 @@
   
   .box {
     display: inline-block;
+    align-items: left;
     height: 5px; /* Altura deseada */
     background-color:rgb(25, 212, 25); /* Color de fondo deseado */
     margin-right: 20px; /* Espacio entre la caja y el texto */
