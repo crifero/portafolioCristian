@@ -19,6 +19,30 @@ export class homeComponent {
     descripcion: 'INGENIERO DE SISTEMAS'
   });
 
+  redes = signal([
+    {
+      red: 'Instagram',
+      logo: 'https://cdn.icon-icons.com/icons2/791/PNG/96/instagram_f_icon-icons.com_65485.png',
+      link: 'https://www.instagram.com/cristianrod0/',
+    },
+    {
+      red: 'Linkedin',
+      logo: 'https://cdn.icon-icons.com/icons2/791/PNG/96/LINKEDIN_icon-icons.com_65488.png',
+      link: 'https://www.linkedin.com/in/cristian-felipe-rodriguez-obando-739703267/',
+    },
+    {
+      red: 'Facebook',
+      logo: 'https://cdn.icon-icons.com/icons2/791/PNG/96/FB_icon-icons.com_65484.png',
+      link: 'https://www.facebook.com/crifero16',
+    },
+    {
+      red: 'GitHub',
+      logo: 'https://cdn.icon-icons.com/icons2/791/PNG/96/GITHUB_icon-icons.com_65505.png',
+      link: 'https://github.com/crifero',
+    }
+    
+  ]);
+
   lenguajes = signal<lenguajes[]>([
     {
       nombre: 'JAVA',
@@ -49,6 +73,13 @@ export class homeComponent {
       conocimiento: 40
     },
   ]);
+
+  experiencia = signal({
+    empresa: 'Tecno.Co',
+    tiempo: 'septiembre 2021 - actualmente',
+    cargo: 'Analista de soporte y desarrollador',
+    descripcion: 'Diseño y desarrollo de software, automatizacion y optimizacion de procesos, gestion de base de datos del proyecto para las tiendas D1 en colombia. Adicionalmente se desarrolla un bot para la gestion de las certificaciones de la empresa'
+  })
 
 }
 

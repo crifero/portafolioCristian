@@ -1,56 +1,77 @@
 <html>
-    <body class="body">
-        <section>
-          <div class="background-container-top">
-            
-          <div class="circular-image">
-            <!-- Contenido del contenedor circular -->
-            <img [src]="person().img" alt="Imagen de fondo">
+
+<body class="body">
+  <section>
+    <div class="background-container-top">
+      <ul class="social-media">
+        <li *ngFor="let redes of redes()">
+        
+        <a [href]="redes.link" >
+          <img [src]="redes.logo" [alt]="redes.red">
+        </a>
+        </li>
+      </ul>
+      <div class="circular-image">
+        <!-- Contenido del contenedor circular -->
+        <img [src]="person().img" alt="Imagen de fondo">
+      </div>
+      <div class="name">
+        <h1>SOY</h1>
+        <h1>{{person().nombre}}</h1>
+        <H2>{{person().descripcion}}</H2>
+        <h2>Diseño y programo cosas maravillosamente simples</h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="background-container-mid">
+      <div class="competencias-title">
+        <h1>COMPETENCIAS</h1>
+        <div class="competencias-container">
+          <div class="competencia">
+            <div>
+              <ul class="competencias-list">
+                <li *ngFor="let lenguaje of lenguajes()">
+                  {{ lenguaje.nombre }}
+
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="name">
-            <h1>SOY</h1>
-            <h1>{{person().nombre}}</h1>
-            <H2>{{person().descripcion}}</H2>
-            <h2>DESARROLLADOR WEB</h2>
+          <div class="competencias-container">
+            <ul class="competencia-list">
+              <li *ngFor="let lenguaje of lenguajes()">
+               
+                <span class="box" [style.width.px]="lenguaje.conocimiento"></span>
+              
+              </li>
+            </ul>
+          </div>
+          <div class="competencias-container">
+            <ul class="competencias-list">
+              <li *ngFor="let lenguaje of lenguajes()">
+                {{ lenguaje.conocimiento }} %
+              </li>
+            </ul>
           </div>
         </div>
-        </section>
-        <section>
-            <div class="background-container-mid">
-                <div class="competencias-title">
-                    <h1>COMPETENCIAS</h1>
-                    <div class="competencias-container">
-                        <div class="competencia">
-                        <div>
-                          <ul class="competencias-list">
-                            <li *ngFor="let lenguaje of lenguajes()">
-                              {{ lenguaje.nombre }}
-                             
-                            </li> 
-                          </ul> 
-                        </div>
-                      </div>
-                      <div class="competencias-container">
-                        <ul class="competencia-list">
-                            <li *ngFor="let lenguaje of lenguajes()">
-                                <span class="box" [style.width.px]="lenguaje.conocimiento"></span>
-                              </li>
-                            </ul>
-                      </div>
-                      <div class="competencias-container">
-                        <ul class="competencias-list">
-                        <li *ngFor="let lenguaje of lenguajes()">
-                            {{ lenguaje.conocimiento }} %
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                      
-                </div>
-                
-            </div>
-            
-          </section>
-      </body>
+      </div>
+      <div class="competencias-title">
+        <h1>EXPERIENCIA</h1>
+        <div class="competencias-container">
+          <div class="experiencia-container">
+            <p style="color: aliceblue;">{{experiencia().empresa}} - {{experiencia().tiempo}}</p>
+            <p style="color: rgb(16, 16, 17);">{{experiencia().cargo}}</p>
+            <p style="color: rgb(155, 1, 1);">{{experiencia().descripcion}}</p>
+          </div>
+        </div>
+
+      </div>
       
+
+    </div>
+
+  </section>
+</body>
+
 </html>
